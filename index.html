@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>加密未來：台灣數位資產政策與挑戰研究</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <!-- 頁面滾動進度條 -->
+  <div id="progressBar" class="progress-bar"></div>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container">
+      <div class="nav-brand">
+        <img src="logo.png" alt="加密未來 Logo" class="nav-logo" />
+        <h2>加密未來</h2>
+      </div>
+      <ul class="nav-menu">
+        <li><a href="#home" class="nav-link active" data-section="home">首頁</a></li>
+        <li><a href="#background" class="nav-link" data-section="background">研究背景</a></li>
+        <li><a href="#method" class="nav-link" data-section="method">研究方法</a></li>
+        <li><a href="#analysis" class="nav-link" data-section="analysis">成果分析</a></li>
+        <li><a href="#conclusion" class="nav-link" data-section="conclusion">結論</a></li>
+        <li><a href="#resources" class="nav-link" data-section="resources">資源</a></li>
+        <li><a href="#faq" class="nav-link" data-section="faq">教學 & 常見問題</a></li>
+      </ul>
+      <div class="nav-toggle" aria-label="切換選單" tabindex="0">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Home Section -->
+  <section id="home" class="section active">
+    <!-- Hero -->
+    <div class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <h1 class="hero-title">加密未來：台灣數位資產政策與挑戰研究</h1>
+          <p class="hero-subtitle">全球金流正在改寫規則。從華爾街到矽谷都在搶進的加密浪潮下，台灣的下一步，是成為亞洲的加密樞紐，還是被邊緣化的孤島？</p>
+          <div class="hero-meta">
+            <div class="meta-item"><strong>班級：</strong>處三孝</div>
+            <div class="meta-item"><strong>組別：</strong>第五組</div>
+            <div class="meta-item"><strong>學年度：</strong>114</div>
+          </div>
+          <button class="btn btn--primary btn--lg" onclick="scrollToSection('motivation')">開始探索</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Key-Statistics Dashboard -->
+    <div id="stats" class="content-section bg-alt">
+      <div class="container">
+        <h2 class="section-title">關鍵統計</h2>
+        <div class="stats-grid">
+          <div class="stat-item">
+            <span class="stat-number counter" data-target="9">0</span>
+            <p>目前合規VASP業者</p>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number counter" data-target="180" data-suffix="萬">0</span>
+            <p>台灣交易所用戶數</p>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number counter" data-target="1500" data-suffix="萬美元">0</span>
+            <p>台灣交易所日均交易量高峰</p>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number counter" data-target="9">0</span>
+            <p>政策重大里程碑</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Interactive Policy Timeline -->
+    <div class="content-section">
+      <div class="container">
+        <h2 class="section-title">政策發展時間軸</h2>
+        <div class="timeline-wrapper">
+          <button class="timeline-arrow left" aria-label="上一個事件">‹</button>
+          <div class="timeline-container" id="timelineContainer"></div>
+          <button class="timeline-arrow right" aria-label="下一個事件">›</button>
+          <!-- Desktop only: timeline slider replaces native scrollbar for manual control -->
+          <input id="timelineSlider" class="timeline-slider" type="range" min="0" value="0" aria-label="時間軸滑桿" />
+        </div>
+        <script src="timeline-animate.js"></script>
+      </div>
+    </div>
+    </section>
+  <!-- Background Section -->
+<section id="background" class="section">
+    <div class="container">
+      <h1 class="page-title">研究背景：一場正在發生的金融革命</h1>
+
+      <div class="content-section glass-card" style="margin-bottom: 40px; padding: 35px;">
+        <h2 class="section-title" style="color: #eb9705; border-bottom: 2px solid rgba(6, 182, 212, 0.3); padding-bottom: 15px; margin-bottom: 25px;">
+          第一樂章：區塊鏈的呼喚
+        </h2>
+        <p style="font-size: 1.1rem; line-height: 2.0; margin-top: 0; margin-bottom: 20px;">
+          想像在我們熟悉的金融世界之外，正悄悄崛起一股無形的數位力量——<span style="color:#eb9705;">虛擬資產</span>。它不依賴任何中央銀行，以數學和密碼學為基礎，挑戰著千年來對「貨幣」與「交易」的認知。這股浪潮，從比特幣誕生之初，就註定將重塑金融的版圖。
+        </p>
+        
+        <blockquote style="margin-top: 30px; border-left: 4px solid #f472b6; padding-left: 20px; color: #cbd5e1; font-style: italic; font-size: 1.05rem; line-height: 1.6;">
+          「這不再是『要不要接受』的問題，而是『如何駕馭』這場技術革命的挑戰。」
+        </blockquote>
+      </div>
+
+      <div class="content-section glass-card" style="margin-bottom: 40px; padding: 35px;">
+        <h2 class="section-title" style="color: #eb9705; border-bottom: 2px solid rgba(6, 182, 212, 0.3); padding-bottom: 15px; margin-bottom: 25px;">
+          第二樂章：台灣的「鋼索挑戰」
+        </h2>
+        <p style="font-size: 1.1rem; line-height: 2.0; margin-top: 0; margin-bottom: 30px;">
+          面對這股風起雲湧的浪潮，各國監管機構如臨大敵。在亞洲，台灣的態度尤為謹慎。一方面，我們渴望擁抱金融科技創新；另一方面，我們又必須嚴守「洗錢防制」的最後一道防線。
+        </p>
+        
+        <div class="impact-grid" style="margin-top: 25px; gap: 30px;">
+            <div class="impact-item positive" style="background: rgba(244, 114, 182, 0.05); border: 1px solid rgba(244, 114, 182, 0.3); padding: 20px; border-radius: 8px;">
+              <h4 style="color: #f472b6; margin-bottom: 5px;">📍 我們的困境</h4>
+              <p style="font-size: 0.95rem; line-height: 1.7;">
+                政策在鼓勵 VASP 發展與避免金融犯罪之間，始終在走鋼索。從最初的洗錢防制指引，到未來的專法，每一步都充滿了不確定性。
+              </p>
+            </div>
+            <div class="impact-item negative" style="background: rgba(244, 114, 182, 0.05); border: 1px solid rgba(244, 114, 182, 0.3); padding: 20px; border-radius: 8px;">
+              <h4 style="color: #f472b6; margin-bottom: 5px;">🌍 國際的壓力</h4>
+              <p style="font-size: 0.95rem; line-height: 1.7;">
+                同時，國際組織 (如 FATF) 對台灣的要求日益嚴苛，我們必須在極短時間內建立起與國際接軌的法規架構，否則將面臨被邊緣化的風險。
+              </p>
+            </div>
+        </div>
+      </div>
+
+      <div class="content-section glass-card" style="padding: 35px;">
+        <h2 class="section-title" style="color: #06b6d4; border-bottom: 2px solid rgba(6, 182, 212, 0.3); padding-bottom: 15px; margin-bottom: 25px;">
+          第三樂章：我們研究的價值
+        </h2>
+        <p style="font-size: 1.1rem; line-height: 2.0; margin-top: 0; margin-bottom: 30px;">
+          正因為這段政策發展歷程既關鍵又混亂，本研究應運而生。我們的目標，就是成為這場革命中的<span style="color:#06b6d4; font-weight: bold;">羅盤</span>：
+        </p>
+        
+        <ul style="margin-top: 30px; font-size: 1.05rem; line-height: 2.2; padding-left: 20px; margin-bottom: 30px;">
+          <li>🔍 **釐清脈絡：** 完整繪製台灣 VASP 監管的發展時間軸。</li>
+          <li>📊 **數據呈現：** 用市場數據與圖表，客觀呈現當前政策的影響。</li>
+          <li>💡 **政策建言：** 比較國際經驗，為台灣未來《虛擬資產服務法》的落地提供具體且務實的建議。</li>
+        </ul>
+        <p style="margin-top: 30px; font-size: 1.1rem; color: #06b6d4; text-shadow: 0 0 5px rgba(6, 182, 212, 0.5);">
+          點擊「成果分析」，查看我們為這場挑戰提供的第一手數據與觀點。
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Method Section -->
+  <section id="method" class="section">
+    <div class="container">
+      <h1 class="page-title">研究方法</h1>
+
+      <div class="content-section">
+        <h2 class="section-title">研究架構</h2>
+        <div class="research-framework">
+          <div class="framework-diagram">
+            <div class="framework-step">
+              <div class="step-number">1</div>
+              <h4>問題界定</h4>
+              <p>識別研究問題與範圍</p>
+            </div>
+            <div class="framework-arrow">→</div>
+            <div class="framework-step">
+              <div class="step-number">2</div>
+              <h4>文獻蒐集</h4>
+              <p>收集相關政策與研究</p>
+            </div>
+            <div class="framework-arrow">→</div>
+            <div class="framework-step">
+              <div class="step-number">3</div>
+              <h4>資料分析</h4>
+              <p>分析政策內容與數據</p>
+            </div>
+            <div class="framework-arrow">→</div>
+            <div class="framework-step">
+              <div class="step-number">4</div>
+              <h4>結論歸納</h4>
+              <p>歸納研究發現與建議</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-section bg-alt">
+        <h2 class="section-title">研究方法詳述</h2>
+        <div class="methods-detailed">
+          <div class="method-detail">
+            <h3>政策文件分析</h3>
+            <div class="method-content">
+              <p><strong>目的：</strong>深入理解台灣數位資產監管政策的內容與發展脈絡</p>
+              <p><strong>範圍：</strong>2021-2025年相關法規、函令、公告</p>
+              <p><strong>分析重點：</strong></p>
+              <ul>
+                <li>政策目標與原則</li>
+                <li>監管要求與標準</li>
+                <li>實施時程與配套措施</li>
+                <li>政策調整與修正</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="method-detail">
+            <h3>法規比較研究</h3>
+            <div class="method-content">
+              <p><strong>比較對象：</strong>美國、歐盟、日本、新加坡、香港</p>
+              <p><strong>比較維度：</strong></p>
+              <ul>
+                <li>監管機構與職責分工</li>
+                <li>業者資格與登記要求</li>
+                <li>反洗錢與客戶盡職調查</li>
+                <li>資本適足性要求</li>
+                <li>投資者保護措施</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="method-detail">
+            <h3>SWOT分析法</h3>
+            <div class="method-content">
+              <p><strong>分析框架：</strong>評估台灣數位資產政策的內外部環境</p>
+              <p><strong>分析面向：</strong></p>
+              <ul>
+                <li><strong>優勢(Strengths)：</strong>政策彈性、技術基礎</li>
+                <li><strong>劣勢(Weaknesses)：</strong>起步較晚、經驗不足</li>
+                <li><strong>機會(Opportunities)：</strong>國際接軌、創新發展</li>
+                <li><strong>威脅(Threats)：</strong>競爭激烈、技術風險</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Analysis Section -->
+  <section id="analysis" class="section">
+    <div class="container">
+      <h1 class="page-title">成果分析</h1>
+      
+      <div class="content-section">
+        <h2 class="section-title">VASP業者發展趨勢</h2>
+        <div class="chart-container" style="position: relative; height: 400px;">
+          <canvas id="timelineChart"></canvas>
+        </div>
+      </div>
+
+      <div class="content-section bg-alt">
+        <h2 class="section-title">合規VASP業者分析</h2>
+        <div class="vasp-analysis">
+          <div class="analysis-grid">
+            <div class="analysis-item">
+              <h4>領導業者</h4>
+              <div class="business-card">
+                <h5>現代財富科技 (MaiCoin/MAX)</h5>
+                <p>台灣最大虛擬資產交易平台，具備完整的合規制度與風控機制。</p>
+              </div>
+            </div>
+            <div class="analysis-item">
+              <h4>主要競爭者</h4>
+              <div class="business-card">
+                <h5>幣託科技 (BitoPro)</h5>
+                <p>台灣第二大交易所，日均交易量達1700萬美元，技術實力雄厚。</p>
+              </div>
+            </div>
+            <div class="analysis-item">
+              <h4>專業服務</h4>
+              <div class="business-card">
+                <h5>鏈科股份 (XREX)</h5>
+                <p>專注企業級服務，提供跨境支付與企業資產管理解決方案。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-section">
+        <h2 class="section-title">政策影響評估</h2>
+        <div class="impact-assessment">
+          <div class="impact-grid">
+            <div class="impact-item positive">
+              <div class="impact-icon">📈</div>
+              <h4>正面影響</h4>
+              <ul>
+                <li>提升投資者保護水準</li>
+                <li>建立業者合規標準</li>
+                <li>降低洗錢與詐欺風險</li>
+                <li>促進產業健康發展</li>
+              </ul>
+            </div>
+            <div class="impact-item negative">
+              <div class="impact-icon">📉</div>
+              <h4>負面影響</h4>
+              <ul>
+                <li>增加業者合規成本</li>
+                <li>部分業者退出市場</li>
+                <li>創新發展受到限制</li>
+                <li>市場競爭力下降</li>
+              </ul>
+            </div>
+            <div class="impact-item neutral">
+              <div class="impact-icon">⚖️</div>
+              <h4>平衡考量</h4>
+              <ul>
+                <li>監管強度與創新平衡</li>
+                <li>保護與發展並重</li>
+                <li>國際接軌與本土化</li>
+                <li>短期成本與長期效益</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="content-section bg-alt">
+        <h2 class="section-title">國際比較分析</h2>
+        <div class="comparison-table">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>國家/地區</th>
+                <th>發展階段</th>
+                <th>監管框架</th>
+                <th>市場開放度</th>
+                <th>ETF狀態</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>美國</td>
+                <td>成熟期</td>
+                <td>多部門監管</td>
+                <td>高</td>
+                <td>已開放</td>
+              </tr>
+              <tr>
+                <td>日本</td>
+                <td>成熟期</td>
+                <td>資金結算法</td>
+                <td>中</td>
+                <td>未開放</td>
+              </tr>
+              <tr>
+                <td>韓國</td>
+                <td>發展期</td>
+                <td>特金法</td>
+                <td>中</td>
+                <td>未開放</td>
+              </tr>
+              <tr>
+                <td>香港</td>
+                <td>發展期</td>
+                <td>虛擬資產條例</td>
+                <td>中</td>
+                <td>未開放</td>
+              </tr>
+              <tr>
+                <td>新加坡</td>
+                <td>發展期</td>
+                <td>PS Act</td>
+                <td>高</td>
+                <td>未開放</td>
+              </tr>
+              <tr class="highlight">
+                <td>台灣</td>
+                <td>起步期</td>
+                <td>虛擬資產服務法(草案)</td>
+                <td>保守</td>
+                <td>未開放</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Conclusion Section -->
+  <section id="conclusion" class="section">
+    <div class="container">
+      <h1 class="page-title">結論</h1>
+
+      <div class="content-section">
+        <h2 class="section-title">研究結論</h2>
+        <div class="conclusions-grid">
+          <div class="conclusion-item major">
+            <div class="conclusion-header">
+              <div class="status status--success">重要發現</div>
+              <h3>監管框架持續完善</h3>
+            </div>
+            <div class="conclusion-content">
+              <p>台灣在VASP監管方面已建立基本框架，包含反洗錢法規要求、業者登記制度等。金管會持續修正相關規定，逐步完善監管體系。</p>
+              <ul>
+                <li>建立VASP業者聲明登錄制度</li>
+                <li>強化KYC與AML合規要求</li>
+                <li>設立投資者保護機制</li>
+                <li>推動產業自律組織成立</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="conclusion-item">
+            <div class="conclusion-header">
+              <div class="status status--info">政策意義</div>
+              <h3>平衡創新與風控</h3>
+            </div>
+            <div class="conclusion-content">
+              <p>台灣監管政策試圖在促進金融科技創新與防範風險之間取得平衡，採用原則性監管搭配實務指引的方式。</p>
+            </div>
+          </div>
+
+          <div class="conclusion-item">
+            <div class="conclusion-header">
+              <div class="status status--warning">挑戰識別</div>
+              <h3>執行與配套待強化</h3>
+            </div>
+            <div class="conclusion-content">
+              <p>雖然政策框架逐步建立，但在執行細節、跨部會協調、國際接軌等方面仍有改善空間。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-section bg-alt">
+        <h2 class="section-title">政策建議</h2>
+        <div class="recommendations">
+          <div class="recommendation-item">
+            <div class="recommendation-priority high">高優先級</div>
+            <div class="recommendation-content">
+              <h4>強化監管執行力</h4>
+              <p>建議政府投入更多資源強化監管執行，包括人力培訓、系統建置、跨部會協調等。</p>
+            </div>
+          </div>
+          <div class="recommendation-item">
+            <div class="recommendation-priority medium">中優先級</div>
+            <div class="recommendation-content">
+              <h4>促進國際接軌</h4>
+              <p>積極參與國際監管標準制定，提升台灣監管制度的國際認可度。</p>
+            </div>
+          </div>
+          <div class="recommendation-item">
+            <div class="recommendation-priority medium">中優先級</div>
+            <div class="recommendation-content">
+              <h4>建立產業溝通機制</h4>
+              <p>建立政府與產業的常態化溝通機制，及時了解產業需求與政策影響。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-section">
+        <h2 class="section-title">未來展望</h2>
+        <div class="future-outlook">
+          <div class="outlook-grid">
+            <div class="outlook-item">
+              <h4>短期展望 (1-2年)</h4>
+              <ul>
+                <li>完善VASP監管細則</li>
+                <li>建立業者評等制度</li>
+                <li>強化投資者教育</li>
+                <li>推動產業標準化</li>
+              </ul>
+            </div>
+            <div class="outlook-item">
+              <h4>中期展望 (3-5年)</h4>
+              <ul>
+                <li>開放更多創新商品</li>
+                <li>建立監管沙盒機制</li>
+                <li>促進國際合作</li>
+                <li>發展央行數位貨幣</li>
+              </ul>
+            </div>
+            <div class="outlook-item">
+              <h4>長期展望 (5年以上)</h4>
+              <ul>
+                <li>建構完整數位金融生態</li>
+                <li>成為亞洲監管典範</li>
+                <li>推動跨境監管合作</li>
+                <li>引領全球監管創新</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Resources Section -->
+<section id="resources" class="section">
+    <div class="container">
+      <h1 class="page-title">研究資源與延伸閱讀</h1>
+
+      <div class="content-section" style="margin-bottom: 40px;">
+        <h2 class="section-title" style="color: #06b6d4;">🛡️ 官方與監管文件</h2>
+        <p style="color: #cbd5e1; margin-bottom: 25px;">本研究的主要法規依據和國際監管標準，這些是研究的基石。</p>
+        
+        <div class="cards-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px;">
+          
+          <div class="glass-card" style="padding: 20px;">
+            <h3 style="font-size: 1.2rem; color: #f8fafc;">《VASP 洗錢防制及打擊資恐辦法》</h3>
+            <p style="font-size: 0.95rem; color: #94a3b8; margin-top: 8px;">發布單位：金融監督管理委員會 (金管會)</p>
+            <p style="font-size: 0.95rem; margin-top: 10px;">台灣對虛擬資產服務商進行法遵要求的起點。</p>
+          </div>
+
+          <div class="glass-card" style="padding: 20px;">
+            <h3 style="font-size: 1.2rem; color: #f8fafc;">VASP 指導原則與自律規範</h3>
+            <p style="font-size: 0.95rem; color: #94a3b8; margin-top: 8px;">發布單位：VASP 公會 / 金管會</p>
+            <p style="font-size: 0.95rem; margin-top: 10px;">針對業者合規、廣告、資產分離的具體要求。</p>
+          </div>
+
+          <div class="glass-card" style="padding: 20px;">
+            <h3 style="font-size: 1.2rem; color: #f8fafc;">FATF 虛擬資產與 VASP 指引</h3>
+            <p style="font-size: 0.95rem; color: #94a3b8; margin-top: 8px;">發布單位：金融行動工作組織 (FATF)</p>
+            <p style="font-size: 0.95rem; margin-top: 10px;">國際上認定 VASP 監管標準的權威依據，影響台灣政策方向。</p>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="content-section" style="margin-bottom: 40px;">
+        <h2 class="section-title" style="color: #06b6d4;">📊 產業報告與學術研究</h2>
+        <p style="color: #cbd5e1; margin-bottom: 25px;">提供市場數據、趨勢分析和各國監管的深度見解。</p>
+        
+        <div class="cards-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px;">
+          
+          <div class="glass-card" style="padding: 20px;">
+            <h3 style="font-size: 1.2rem; color: #f8fafc;">全球區塊鏈與加密市場年度報告</h3>
+            <p style="font-size: 0.95rem; color: #94a3b8; margin-top: 8px;">來源：Chainalysis / Messari 等國際機構</p>
+            <p style="font-size: 0.95rem; margin-top: 10px;">全球交易量、採用率與金融科技趨勢數據。</p>
+          </div>
+
+          <div class="glass-card" style="padding: 20px;">
+            <h3 style="font-size: 1.2rem; color: #f8fafc;">主要國家加密貨幣法規比較分析</h3>
+            <p style="font-size: 0.95rem; color: #94a3b8; margin-top: 8px;">來源：國際智庫或法律事務所</p>
+            <p style="font-size: 0.95rem; margin-top: 10px;">用於比對台灣與美國、日本、新加坡等地的監管框架差異。</p>
+          </div>
+
+          <div class="glass-card" style="padding: 20px;">
+            <h3 style="font-size: 1.2rem; color: #f8fafc;">《區塊鏈技術在金融體系的應用與挑戰》</h3>
+            <p style="font-size: 0.95rem; color: #94a3b8; margin-top: 8px;">來源：學術界期刊或研討會論文</p>
+            <p style="font-size: 0.95rem; margin-top: 10px;">深入探討底層技術與法律適用性的學術觀點。</p>
+          </div>
+
+        </div>
+      </div>
+      
+      <div class="content-section">
+        <h2 class="section-title" style="color: #06b6d4;">💡 延伸知識與實用工具</h2>
+        <p style="color: #cbd5e1; margin-bottom: 25px;">提供給有興趣的讀者進一步探索的線上資源與工具。</p>
+        
+        <div class="cards-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px;">
+          
+          <div class="glass-card" style="padding: 20px;">
+            <h3 style="font-size: 1.2rem; color: #f8fafc;">CoinMarketCap / CoinGecko</h3>
+            <p style="font-size: 0.95rem; color: #94a3b8; margin-top: 8px;">用途：即時市場數據查詢</p>
+            <p style="font-size: 0.95rem; margin-top: 10px;">追蹤全球數千種加密貨幣的價格與市值變化。</p>
+          </div>
+          
+          <div class="glass-card" style="padding: 20px;">
+            <h3 style="font-size: 1.2rem; color: #f8fafc;">公鏈瀏覽器 (Etherscan, Solscan)</h3>
+            <p style="font-size: 0.95rem; color: #94a3b8; margin-top: 8px;">用途：鏈上交易查詢與透明度驗證</p>
+            <p style="font-size: 0.95rem; margin-top: 10px;">讓用戶可以查閱區塊鏈上所有已發生的交易紀錄。</p>
+          </div>
+          
+          <div class="glass-card" style="padding: 20px;">
+            <h3 style="font-size: 1.2rem; color: #f8fafc;">台灣主要合規交易所</h3>
+            <p style="font-size: 0.95rem; color: #94a3b8; margin-top: 8px;">代表：MaiCoin、BitoPro、XREX 等</p>
+            <p style="font-size: 0.95rem; margin-top: 10px;">供用戶安全、合法地進行台幣與加密貨幣交易。</p>
+          </div>
+
+        </div>
+      </div>
+      
+    </div>
+  </section>
+  <!-- FAQ / Tutorial Section -->
+  <section id="faq" class="section">
+    <div class="container">
+      <h1 class="page-title">新手村：加密貨幣入門 & FAQ</h1>
+
+      <div class="content-section">
+        <h2 class="section-title">🧠 核心觀念：為什麼會有加密貨幣？</h2>
+        
+        <div class="content-section glass-card" style="padding: 24px; margin-bottom: 24px;">
+          <div style="display: flex; align-items: flex-start; gap: 16px; flex-wrap: wrap;">
+            <div style="font-size: 2.5rem; background: rgba(6, 182, 212, 0.1); padding: 10px; border-radius: 12px;">🗽</div>
+            <div style="flex: 1;">
+              <h3 style="color: #06b6d4; margin-bottom: 8px; font-size: 1.4rem;">1. 理念：把「錢的控制權」還給你</h3>
+              <p><strong>背景故事：</strong> 2008 年金融海嘯，銀行倒閉、政府印鈔救市，讓人們意識到「把錢完全交給中心化機構」是有風險的。</p>
+              <p><strong>核心精神：</strong> 比特幣發明者中本聰（Satoshi Nakamoto）的想法——<strong>「如果我們不需要銀行，就能直接點對點 (P2P) 轉帳呢？」</strong> 這就是「去中心化」的初衷：沒有大台、沒有審查，你的資產真正屬於你。</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="motivation-grid" style="margin-top: 0;">
+          
+          <div class="content-section glass-card" style="padding: 20px; margin:0;">
+            <h3 style="color: #f8fafc; margin-bottom: 10px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 10px;">
+              🛡️ 為什麼它不能被偽造？
+              <span style="display:block; font-size:0.8rem; color:#06b6d4; margin-top:4px;">(分散式帳本技術)</span>
+            </h3>
+            <p>想像一個班級裡，原本只有班長（銀行）有一本帳簿，他要偷改很容易。</p>
+            <p>但現在，<strong>全班每位同學都有一本一模一樣的帳簿</strong>。每當有人交易，全班同步記帳。如果有人想偷改自己的餘額，會立刻被其他幾千幾萬本帳簿抓包。</p>
+          </div>
+
+          <div class="content-section glass-card" style="padding: 20px; margin:0;">
+            <h3 style="color: #f8fafc; margin-bottom: 10px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 10px;">
+              💎 為什麼它有價值？
+              <span style="display:block; font-size:0.8rem; color:#06b6d4; margin-top:4px;">(數位稀缺性)</span>
+            </h3>
+            <p>電腦裡的圖片可以複製貼上無限份，但比特幣不行。</p>
+            <p>透過程式碼限制，比特幣總量只有 <strong>2,100 萬顆</strong>，永遠無法超發。這種<strong>「數位世界的限量發行」</strong>特性，讓它像數位黃金一樣，能夠對抗通貨膨脹（法幣越印越薄）。</p>
+          </div>
+
+          <div class="content-section glass-card" style="padding: 20px; margin:0;">
+            <h3 style="color: #f8fafc; margin-bottom: 10px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 10px;">
+              🤝 誰來維持運作？
+              <span style="display:block; font-size:0.8rem; color:#06b6d4; margin-top:4px;">(共識機制 & 挖礦)</span>
+            </h3>
+            <p>既然沒有銀行員工，誰來幫忙記帳？</p>
+            <p>答案是<strong>「礦工」或「驗證者」</strong>。他們貢獻電腦算力來維護帳本安全，系統則會自動發送加密貨幣作為獎勵。這是一個設計精妙的經濟誘因系統，讓大家自發性地保護網路。</p>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="content-section">
+        <h2 class="section-title">🇹🇼 台灣人最想問的 FAQ</h2>
+        <div class="faq-grid">
+          
+          <div class="content-section glass-card" style="padding: 20px; margin:0;">
+            <h3 style="font-size: 1.2rem; color: #f8fafc;">⚖️ 在台灣買賣加密貨幣「合法」嗎？</h3>
+            <p style="margin-top: 10px;"><strong>合法，但受監管。</strong></p>
+            <p>台灣目前並不禁止加密貨幣交易。但為了防詐騙洗錢，政府要求交易所必須通過「洗錢防制法令遵循聲明」。簡單說，<strong>只要選台灣合規的交易所（如 MaiCoin, BitoPro, XREX 等），就是合法的。</strong></p>
+          </div>
+
+          <div class="content-section glass-card" style="padding: 20px; margin:0;">
+            <h3 style="font-size: 1.2rem; color: #f8fafc;">💰 比特幣那麼貴，我買不起一顆怎麼辦？</h3>
+            <p style="margin-top: 10px;"><strong>不用買整顆！可以只買 100 台幣。</strong></p>
+            <p>加密貨幣可以分割到小數點後 8 位。就像黃金可以買 1 克一樣，你也可以只買 0.0001 顆比特幣。對於新手來說，用幾百塊台幣「定期定額」是最好的體驗方式。</p>
+          </div>
+
+          <div class="content-section glass-card" style="padding: 20px; margin:0;">
+            <h3 style="font-size: 1.2rem; color: #f8fafc;">💸 賺錢需要繳稅嗎？</h3>
+            <p style="margin-top: 10px;"><strong>個人小額通常不用，大戶要注意。</strong></p>
+            <p>目前台灣個人買賣加密貨幣若被視為「海外所得」（如果是海外平台），有 750 萬台幣的免稅額度。但在國內交易所出金頻繁或金額過大，國稅局可能會關切。建議<strong>保留所有交易紀錄</strong>以備查核。</p>
+          </div>
+
+          <div class="content-section glass-card" style="padding: 20px; margin:0;">
+            <h3 style="font-size: 1.2rem; color: #f8fafc;">🚨 很怕被詐騙，怎麼預防？</h3>
+            <p style="margin-top: 10px;"><strong>記住這三點，避開 99% 詐騙：</strong></p>
+            <ul style="padding-left: 20px;">
+              <li><strong>不要把錢交給別人操作：</strong>說「保證獲利」、「老師帶單」的都是詐騙。</li>
+              <li><strong>只用知名大平台：</strong>不要下載網友傳給你的奇怪 App。</li>
+              <li><strong>私鑰/助記詞絕不給人：</strong>誰跟你要這組密碼，誰就是要搶你的錢。</li>
+            </ul>
+          </div>
+
+          <div class="content-section glass-card" style="padding: 20px; margin:0;">
+            <h3 style="font-size: 1.2rem; color: #f8fafc;">📉 如果不小心轉錯帳號，救得回來嗎？</h3>
+            <p style="margin-top: 10px;"><strong>幾乎救不回來。</strong></p>
+            <p>區塊鏈是不可逆的，轉錯地址就像要把丟進海裡的硬幣撈回來一樣難。所以轉帳前請務必<strong>核對前 4 碼與後 4 碼</strong>，或先試轉一筆小額確認。</p>
+          </div>
+
+          <div class="content-section glass-card" style="padding: 20px; margin:0;">
+            <h3 style="font-size: 1.2rem; color: #f8fafc;">🏦 交易所倒閉怎麼辦？（如 FTX 事件）</h3>
+            <p style="margin-top: 10px;"><strong>錢放在交易所確實有風險。</strong></p>
+            <p>這就是為什麼大家常說「Not your keys, not your coins」。如果你有大筆資產，建議買一個<strong>冷錢包</strong>自己保管，交易所只用來做買賣交易，不要當銀行存。</p>
+          </div>
+
+        </div>
+        <p style="margin-top:24px; color: var(--color-text-secondary); text-align: center; font-size: 0.9rem;">
+          本頁面最後更新時間：2025-11-20<br>
+          <em>免責聲明：本站內容僅供教學參考，不構成任何投資建議。加密貨幣市場波動大，投資請謹慎評估風險。</em>
+        </p>
+      </div>
+
+    </div>
+  </section>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>研究資訊</h4>
+          <p>加密未來：台灣數位資產政策與挑戰研究</p>
+          <p>研究期間：2025年9月-</p>
+        </div>
+        <div class="footer-section">
+          <h4>研究者</h4>
+          <p>處三孝 丁芷宜    處三孝 郭湘宜</p>
+          <p>處三孝 黃培恩    處三孝 陳柏翰</p>
+          <p>處三孝 許秝瑋    處三孝 葉宥成</p>
+          <p>處三孝 許秝瑋</p>
+        </div>
+        <div class="footer-section">
+          <h4>關鍵字</h4>
+          <div class="keywords">
+            <span class="keyword">VASP</span>
+            <span class="keyword">KYC</span>
+            <span class="keyword">AML</span>
+            <span class="keyword">數位資產</span>
+            <span class="keyword">監管政策</span>
+            <span class="keyword">金融科技</span>
+          </div>
+        </div>
+      </div>
+      <div class="sponsor" style="display:flex; align-items:center; justify-content:space-between; gap:12px; padding:16px 0; border-top:1px solid rgba(255,255,255,0.04);">
+        <p style="margin:0; color:var(--color-text);">如果您對於交易加密貨幣有興趣，</p>
+        <a href="https://www.ourbit.com/zh-TW/register?inviteCode=4XWPUX" class="sponsor-btn" style="background:var(--color-primary); color:#fff; padding:10px 16px; border-radius:22px; text-decoration:none; font-weight:600; box-shadow:0 2px 6px rgba(0,0,0,0.15);">請點擊這裡</a>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 第五組. 專題研究作品.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
