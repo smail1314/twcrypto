@@ -27,7 +27,7 @@ const researchData = {
         {date: "2024年7月", event: "26家業者完成法遵聲明", phase: "第三階段", businesses: 26},
         {date: "2024年11月", event: "《VASP登記辦法》發布", phase: "第三階段", businesses: 25},
         {date: "2025年3月", event: "《虛擬資產服務法》草案預告", phase: "第四階段", businesses: 25},
-        {date: "2025年9月", event: "首批9家合規業者名單公布", phase: "第三階段", businesses: 9}
+        {date: "2025年9月", event: "首批9家合規業者名單公布", phase: "第四階段", businesses: 9}
     ],
     vaspBusinesses: [
         {name: "現代財富科技", brand: "MaiCoin/MAX", status: "通過登記", position: "領導者"},
